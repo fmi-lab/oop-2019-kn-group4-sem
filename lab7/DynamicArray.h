@@ -69,7 +69,7 @@ class DynamicArray
             std::cout << "Mapping all" << std::endl;
              DynamicArray<R> result(this->size);
              for (int i = 0; i < this->size; i++) {
-                result[i] = map(this->items[i]);
+                result.add(map(this->items[i]));
                 std::cout << "Result[" << i << "] = " << result[i] << std::endl;
              }
              return result;

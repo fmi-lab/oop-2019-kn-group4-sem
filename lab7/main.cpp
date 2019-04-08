@@ -53,13 +53,13 @@ int main()
     intArray[0] = 5;
     intArray.add(14);
     printFirst(intArray);
-    DynamicArray<double> result = intArray.mapAll(multiplyByDouble);
+    DynamicArray<double> doubles = intArray.mapAll(multiplyByDouble);
     DynamicArray<int> squared = intArray.mapAll(square);
 
     int total = intArray.reduce(sum, 0);
     int maxElement = intArray.reduce(findMax, intArray[0]);
-    cout << intArray << endl;
-    cout << squared << endl;
+    cout << "Original array: " << intArray << endl;
+    cout << "Mapped to doubles: " << doubles << endl;
     cout << "Max element: " << maxElement << endl;
 
     return 0;
