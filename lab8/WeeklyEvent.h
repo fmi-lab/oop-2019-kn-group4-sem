@@ -16,6 +16,8 @@ class WeeklyEvent: public Event
         WeeklyEvent& operator=(WeeklyEvent const&);
         ~WeeklyEvent();
         bool isInProgress(DateTime const& now) const;
+        Event* clone() const;
+
     protected:
 
     private:

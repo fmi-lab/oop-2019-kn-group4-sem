@@ -11,6 +11,8 @@ class Event
         Event(std::string description, DateTime start, unsigned duration);
         std::string getDescription() const;
         virtual bool isInProgress(DateTime const& now) const;
+        virtual Event* clone() const;
+        virtual ~Event() { }
 
     protected:
         std::string description;

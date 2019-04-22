@@ -47,3 +47,6 @@ bool WeeklyEvent::isInProgress(DateTime const& now) const
     return false;
 }
 
+Event* WeeklyEvent::clone() const {
+    return new WeeklyEvent(*this);
+}

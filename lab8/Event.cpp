@@ -22,3 +22,7 @@ bool Event::isInProgress(DateTime const& now) const
     DateTime end = start.addMinutes(duration);
     return start < now && now < end;
 }
+
+Event* Event::clone() const {
+    return new Event(*this);
+}

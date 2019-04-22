@@ -2,6 +2,7 @@
 #include "DateTime.h"
 #include "Event.h"
 #include "WeeklyEvent.h"
+#include "Calendar.h"
 using namespace std;
 
 int& operator+=(int& x, const DateTime& d) {
@@ -31,6 +32,10 @@ int main()
     WeeklyEvent w("OOP seminar", DateTime(2019, 2, 19, 15, 15), 105, 15);
     cout << w.getDescription() << endl;
     cout << w.isInProgress(DateTime(2019,2,26,16, 00)) << endl;
+
+    Calendar cal("My Cal");
+    cal.addEvent(e);
+    cal.addWeeklyEvent(w);
 
     return 0;
 }
